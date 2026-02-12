@@ -34,6 +34,8 @@ img, svg {
 .intro{
     padding-left: 5rem;
     padding-top: 3rem;
+    width: 100%;
+    max-width: 500px;
 }
 .intro h1{
     font-size: 3.5rem;
@@ -45,6 +47,20 @@ img, svg {
     font-weight: 400;
     color: #2E2A26;
     margin-top: 1rem;
+}
+
+.explore{
+    display: flex;
+    margin-top: 8rem;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.explore h3{
+    font-size: 1.5rem;
+    font-family: fraunces, serif;
+    font-weight: 600;
+    color: #3F6A45;
+    text-shadow: rgb(0, 0, 0, 0.2) 4px 4px 4px;
 }
 
 .hero-right{
@@ -78,32 +94,11 @@ img, svg {
     transform-origin: bottom center;
 }
 
-/* #top-plant {
-  transform-origin: bottom center;
-} */
-
 .tt-leaf {
   transform-box: fill-box;
   transform-origin: bottom center;
   transition: transform 0.25s ease-out;
   will-change: transform;
-}
-
-
-.explore{
-    position: absolute;
-    bottom: 5rem;
-    left: 25rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-}
-.explore h3{
-    font-size: 1.5rem;
-    font-family: fraunces, serif;
-    color: #3F6A45;
-    text-shadow: rgb(0, 0, 0, 0.2) 4px 4px 4px;
 }
 
 /*---------------------------------------------------------*/
