@@ -13,6 +13,24 @@ body{
     background-color: #F3E3CE;
 }
 
+.scroll-watcher{
+    height: 3px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #3F6A45;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+
+    animation: scrollWatcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scrollWatcher {
+    to { scale: 1 1;}
+}
+
 h2{
     width: 100%;
     font-size: 2.2rem;
@@ -41,7 +59,7 @@ header{
     top: 0;
     z-index: 100;
     background-color: #f3e3ce1b;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     border-bottom: 1px solid #ffffffd4;
     box-shadow: 3px 3px 3px #00000012;
 }
@@ -75,5 +93,6 @@ header nav ul li a{
     font-weight: 500;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
+    font-family: fraunces, serif;
 }
 
