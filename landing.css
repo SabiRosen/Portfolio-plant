@@ -34,7 +34,7 @@ img, svg {
 .intro{
     padding-left: 5rem;
     padding-top: 3rem;
-    width: 100%;
+    width: fit-content;
     max-width: 500px;
 }
 .intro h1{
@@ -207,6 +207,7 @@ img, svg {
     z-index: 2;
 
     margin: 5rem 10rem 0 10rem;
+    max-width: fit-content;
 }
 
 .project-list{
@@ -338,11 +339,15 @@ img, svg {
     margin: 11rem auto;
 }
 
+
 /*skills--------------------------------------------------------*/
 
 .skills-wrapper{
     width: 100%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .skills-wrapper h2{
@@ -494,23 +499,6 @@ img, svg {
         width: 200px;
     }
 
-    .explore{
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 18rem;
-        width: 100%;
-        max-width: 400px;
-        display: flex;
-        justify-content: center;
-    }
-    .explore h3{
-        font-size: 1.2rem;
-        font-weight: 400;
-    }
-    .explore img{
-        width: 20px;
-        height: auto;
-    }
 
     /*--------------------projekter--------------------*/
     .projects{
