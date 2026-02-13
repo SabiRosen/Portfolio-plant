@@ -1,0 +1,41 @@
+#kontakt-container{
+    background-color: #7A8F6A;
+    color: #fff;
+    width: 65%;
+
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+#kontakt-oplysninger{
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    width: 100%;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.kontakt-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.kontakt-info p, .kontakt-info a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.kontakt-image{
+    width: 55%;
+    padding-top: 2rem;
+}
+.kontakt-image img{
+    width: 100%;
+}

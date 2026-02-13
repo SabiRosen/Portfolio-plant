@@ -30,6 +30,14 @@ body{
 @keyframes scrollWatcher {
     to { scale: 1 1;}
 }
+main h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #2E2A26;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+    text-align: center;
+}
 
 h2{
     width: 100%;
@@ -141,6 +149,59 @@ header img:hover{
     transition: 0.3s ease-in-out;
     font-family: fraunces, serif;
 }
+
+/*animation for projects sektion*/
+
+#m-leaf-right-back, #m-leaf-left, #t-leaf, #t-leaf-8{
+    animation: sway 5s ease-in-out infinite;
+    transform-origin: 50% 90%;
+}
+#m-leaf-right-front, #m-leaf-front, #t-leaf-2, #t-leaf-1{
+    animation: sway2 5s ease-in-out infinite;
+    transform-origin: 50% 90%;
+}
+#m-leaf-back-left, #m-leaf-right, #m-leaf-back, #t-leaf-3{
+    animation: sway3 5s ease-in-out infinite;
+    transform-origin: 50% 90%;
+}
+#m-leaf-mid, #t-leaf-6, #t-leaf-7{
+    animation: sway4 5s ease-in-out infinite;
+    transform-origin: 50% 90%;
+}
+#right-branch{
+    animation: sway 5s ease-in-out infinite;
+    transform-origin: 90% 50%;
+}
+#left-branch{
+    animation: sway2 5s ease-in-out infinite;
+    transform-origin: 10% 50%;
+}
+#back-branch{
+    animation: sway3 5s ease-in-out infinite;
+    transform-origin: 50% 50%;
+}
+
+@keyframes sway {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes sway2 {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes sway3 {
+  0%   { transform: rotate(0deg); }
+  50%  { transform: rotate(3deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes sway4 {
+    0%   { transform: rotate(0deg); }
+    50%  { transform: rotate(-0.5deg); }
+    100% { transform: rotate(0deg); }
+}
+
 
 @media screen and (max-width: 600px){
     .header-nav{
