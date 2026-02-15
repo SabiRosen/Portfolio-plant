@@ -210,6 +210,26 @@ img, svg {
     max-width: fit-content;
 }
 
+.projects-lamp-section .typewriter {
+    max-width: 20ch;   /* styrer hvor teksten brydes */
+    text-align: center;
+    margin: 0 auto;
+    white-space: normal;   /* tillader linjeskift */
+}
+
+
+#project-container{
+    display: flex;
+    gap: 2rem;
+}
+
+.project img{
+    border: 20px solid transparent;  /* Required for border-image */
+  padding: 0;
+  border-image: url(images/border.png) 30 stretch;
+}
+
+/*
 .project-list{
     width: 100%;
     max-width: 1200px;
@@ -224,8 +244,7 @@ img, svg {
     z-index: 2;
 
 }
-
-.project-flip-card{
+ .project-flip-card{
     background-color: transparent;
     max-width: 400px;
     min-height: 520px;
@@ -278,7 +297,7 @@ img, svg {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden; /*safari*/
+    -webkit-backface-visibility: hidden; /*Safari*//*
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -320,25 +339,7 @@ img, svg {
     font-weight: 400;
     color: #ffffff;
     padding-bottom: 1rem;
-}
-
-.line2 {
-    position: absolute;
-    bottom: 0;          
-    left: 0;
-    width: 100%;
-    height: 250px;      
-    background-color: #7A8F6A;
-
-    z-index: 1;         
-}
-
-.line2 .btn {
-    position: relative;
-    z-index: 2;
-    margin: 11rem auto;
-}
-
+} */
 
 /*skills--------------------------------------------------------*/
 
@@ -411,7 +412,7 @@ img, svg {
 }
 
 .contact-illustration img{
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 
