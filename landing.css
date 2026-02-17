@@ -102,69 +102,6 @@ img, svg {
 }
 
 /*---------------------------------------------------------*/
-.btn{
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    padding: 1rem 1.5rem;
-    background-color: #5B7CA4;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 400;
-    font-size: 1.2rem;
-    border-radius: 50px;
-    margin: 3rem auto 0;
-    transition: 0.3s ease-in-out;
-    box-shadow: 4px 4px 8px #00000033;
-}
-.btn:hover{
-    background-color: #A2B7CF;
-    color: #2E2A26;
-    transform: scale(1.05);
-    cursor: pointer;
-}
-
-/*about sektion*/
-
-.about{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 3rem;
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-}
-.about-img{
-    width: 45%;
-    padding: 4rem;
-}
-
-.about-img img{
-    width: 100%;
-    height: auto;
-    
-}
-
-.about-content{
-    max-width: 40%;
-    padding: 5rem;
-}
-
-.about-content p{
-    margin-top: 1rem;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #2E2A26;
-    line-height: 1.6;
-}
-
-.about-values{
-    display: flex;
-    gap: 2rem;
-    padding-top: 4rem;
-    justify-content: center;
-}
 
 .line{
     width: 100%;
@@ -176,24 +113,28 @@ img, svg {
 }
 
 /*============projects sektion==============*/
-
 .projects{
-    width: 100%;
-    padding: 4rem 2rem;
+    margin-bottom: 5rem;
+}
+
+.project{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     align-items: center;
-    z-index: 2;
-    position: relative;
+    gap: 1.5rem;
+
+     flex: 0 1 430px;
 }
+
 
 .projects-lamp-section{
     display: flex;
+    justify-content: center;
     gap: 1rem;
     position: relative;
     z-index: 2;
-    top: -70px;
+    top: -20px;
+    margin-bottom: 2rem;
 }
 .projects-lamp-section img{
     width: 200px;
@@ -206,28 +147,48 @@ img, svg {
     color: #2E2A26;
     z-index: 2;
 
-    margin: 5rem 10rem 0 10rem;
+    margin: 15rem 2rem 0 2rem;
     max-width: fit-content;
-}
-
-.projects-lamp-section .typewriter {
-    max-width: 20ch;   /* styrer hvor teksten brydes */
-    text-align: center;
-    margin: 0 auto;
-    white-space: normal;   /* tillader linjeskift */
 }
 
 
 #project-container{
     display: flex;
     gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.project img{
-    border: 20px solid transparent;  /* Required for border-image */
-  padding: 0;
-  border-image: url(images/border.png) 30 stretch;
+.video-wrapper{
+    position: relative;
+    display: inline-block;
+    padding: 18px; /* afstand mellem video og blob */
 }
+
+.video-wrapper::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #7A8F6A;
+    z-index: 0;
+
+    border-radius: 
+      100% 100% 5% 5% / 
+      5% 5% 90% 60%;
+
+    transform: rotate(-2deg);
+}
+
+.video-wrapper video{
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
 
 /*
 .project-list{

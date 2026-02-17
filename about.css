@@ -1,0 +1,147 @@
+/*about sektion*/
+
+.about,
+.about-img{
+  overflow: visible;
+}
+
+.about{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+
+    width: 100%;
+    margin: 0 auto 5rem;
+    max-width: 1300px;
+
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 4rem 0;
+    
+}
+
+.about-img{
+  flex: 0 0 48%;
+  max-width: 48%;
+  padding: 0;
+
+  position: relative;
+  min-height: 520px;
+}
+
+/* fælles */
+.img-card{
+  position: absolute;
+  overflow: visible;
+  z-index: 1;
+  isolation: isolate;
+
+  --ov-x: 0px;
+  --ov-y: 0px;
+  --ov-scale: 1.08;
+}
+
+.img-1{ --ov-scale: 1.20; --ov-x: -85px;  --ov-y: -22px; }
+.img-2{ --ov-scale: 1.20; --ov-x:  180px;  --ov-y: -35px; }
+.img-3{ --ov-scale: 0.7; --ov-x:  105px; --ov-y: -60px; }
+
+
+/* billedet */
+.img-card img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Billede 1: venstre, stående */
+.img-1{
+  left: 0;
+  top: 70px;
+
+  width: clamp(150px, 17vw, 250px);
+  aspect-ratio: 6/7;
+}
+
+/* Billede 2: øverst, liggende — større og forskudt */
+.img-2{
+  left: 58%;
+  top: 0;
+
+  width: clamp(200px, 22vw, 400px);
+  aspect-ratio: 15/10;
+
+  transform: translateX(-10%); /* giver den “forskudt” look */
+}
+
+/* Billede 3: nederst, stående — samme størrelse som billede 1 */
+.img-3{
+  left: 46%;
+  top: 280px;
+
+  width: clamp(150px, 17vw, 250px);
+  aspect-ratio: 6/7;
+
+  transform: translateX(-5%);
+}
+
+.photo{
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+.overlay{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  display: block;
+
+  transform: translate(var(--ov-x, 0px), var(--ov-y, 0px)) scale(var(--ov-scale, 1));
+  transform-origin: center;
+}
+
+
+
+
+/*about indholdet til højre*/
+
+.about-content{
+    flex: 0 1 40%;
+    padding: 0;
+    max-width: none;
+    min-width: 0;
+}
+
+.about-content h2{
+    margin-bottom: 4rem;
+}
+
+.about-content p{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #2E2A26;
+    line-height: 1.6;
+}
+
+.about-values{
+    display: flex;
+    gap: 2rem;
+    padding-top: 4rem;
+    justify-content: center;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .overlay #left-branch{
+    animation: none;
+  }
+}

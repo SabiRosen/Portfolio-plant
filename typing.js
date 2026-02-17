@@ -1,33 +1,25 @@
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("animate");
-//     }
-//   });
-// }, { threshold: 0.5 });
+ const observer = new IntersectionObserver(entries => {
+   entries.forEach(entry => {
+     if (entry.isIntersecting) {
+       entry.target.classList.add("animate");
+     }
+   });
+ }, { threshold: 0.5 });
 
-// document.querySelectorAll(".typewriter").forEach(el => {
-//   observer.observe(el);
-// });
+ document.querySelectorAll(".typewriter").forEach(el => {
+   observer.observe(el);
+ });
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
 
-    const el = entry.target;
-    const text = el.textContent;
 
-    el.innerHTML = "";
+ // header animation
 
-    text.split("").forEach((char, i) => {
-      const span = document.createElement("span");
-      span.textContent = char === " " ? "\u00A0" : char;
-      span.style.animationDelay = `${i * 0.05}s`;
-      el.appendChild(span);
-    });
+ const header = document.querySelector("header");
 
-    observer.unobserve(el); // kør kun én gang
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 10) {
+      header.classList.add("show");
+    } else {
+      header.classList.remove("show");
+    }
   });
-}, { threshold: 0.3 });
-
-document.querySelectorAll(".wave").forEach(el => observer.observe(el));

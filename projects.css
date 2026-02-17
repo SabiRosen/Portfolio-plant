@@ -1,67 +1,50 @@
+.background{
+    background-image: url(images/baggrund.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
 
-
-.fittyfitty {
+#project-mockups{
     display: flex;
-    flex-direction: row;
+    margin: 0 auto;
+
 }
 
-.illustration{
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.illustration svg{
-    width: 50%;
-}
-
-.project-description{
-    width: 60%;
+.mockup{
+    width: 100%;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 2rem;
-}
-.project-description h2{
-    margin-bottom: 1rem;
-}
-.project-description p{
-    text-align: left;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-}
-
-.link{
-    text-decoration: none;
-    color: #3F6A45;
-    font-size: 1.2rem;
-}
-.link:hover{
-    text-decoration: underline;
-    text-underline-offset: 3px;
-}
-
-.project-btn{
-    display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-
-    padding: 0.8rem 1.2rem;
-    background-color: #5B7CA4;
-    border-radius: 50px;
-    margin: 3rem auto 0;
-
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
 }
-.project-btn img{
-    width: 30px;
+.mockup img{
+    width: 90%;
+    object-fit: contain;
+    aspect-ratio: 2/1;
 }
 
-.divider{
+.mockup-info{
+    width: 80%;
+}
+
+.mockup-info h3{
+    margin: 2rem 0 2rem 0;
+    font-size: 1.5rem;
+}
+
+.mockup-info p{
+    font-size: 1.2rem;
+}
+
+
+/*---------------enkelte sider--------------------------*/
+
+.project-video{
+    display: flex;
     width: 100%;
-    height: 5px;
-    background-color: #C97B63;
-    margin: 1rem 0;
+}
+
+.project-video video{
+    width: 80%;
 }
