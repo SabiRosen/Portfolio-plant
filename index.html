@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="about.css">
     <script src="plant.js" defer></script>
     <script src="typing.js" defer></script>
+    <script src="skills.js" defer></script>
 
 </head>
 <body>
@@ -19,7 +20,7 @@
         <a href="index.html" id="logo"><img src="images/logo.svg" alt="Logo"></a>
         <nav class="header-nav">
             <ul class="nav-links">
-                <li><a href="#projects">Projekter</a></li>
+                <li><a href="index.html#projects">Projekter</a></li>
                 <li><a href="about.html">Om mig</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
@@ -27,8 +28,11 @@
         <nav class="mobile-nav">
             <img src="images/burger.svg" alt="menu ikon" id="burger">
             <div class="mobil-menu">
+                <button class="close-menu" aria-label="Luk menu">
+                    <img src="images/burger-close.svg" alt="menu lukke ikon">
+                </button>
                 <ul>
-                    <li><a href="#projects">Projekter</a></li>
+                    <li><a href="index.html#projects">Projekter</a></li>
                     <li><a href="about.html">Om mig</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
@@ -47,7 +51,9 @@
                     <img src="images/rosenkrantsStudio.svg" alt="Logo">
                 </div>
                 <div class="intro">
-                    <h2 class="typewriter">Hej! mit navn er Sabina</h2>
+                    <div class="typewriter-container">
+                        <h2 class="typewriter">Hej! mit navn er Sabina</h2>
+                    </div>
                     <p>Velkommen til min digtiale have!</p>
 
                     <div class="explore">
@@ -120,30 +126,30 @@
 
             <div id="project-container">
                 <div class="project">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                    <source src="videos/hvidvin-video.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <a href="havblink.html" class="btn">Se mere</a>
-                </div>
-
-                <div class="project">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                    <source src="videos/hjerter-video.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <a href="interactiv.html" class="btn">Se mere</a>
+                    <div class="video-wrapper">
+                        <video autoplay muted loop playsinline>
+                        <source src="videos/hvidvin-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <a href="havblink.html" class="btn">Se mere</a>
                 </div>
 
                 <div class="project">
-                <div class="video-wrapper">
-                    <video autoplay muted loop playsinline>
-                    <source src="videos/kaffekanden-video.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-wrapper">
+                        <video autoplay muted loop playsinline>
+                        <source src="videos/hjerter-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <a href="interactiv.html" class="btn">Se mere</a>
                 </div>
-                <a href="kaffekanden.html" class="btn">Se mere</a>
+
+                <div class="project">
+                    <div class="video-wrapper">
+                        <video autoplay muted loop playsinline>
+                        <source src="videos/kaffekanden-video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <a href="kaffekanden.html" class="btn">Se mere</a>
                 </div>
             </div>
         </section>
@@ -660,7 +666,6 @@
                         </g>
                     </svg>
 
-
                 </figure>
 
                 <figure class="img-card img-3">
@@ -904,28 +909,58 @@
                 <div class="skills-list">
                     <h3>Software skills</h3>
                     <div class="skills-icons">
-                        <img src="images/ai.svg" alt="Ai logo">
-                        <img src="images/figma.svg" alt="Figma logo">
-                        <img src="images/ps.svg" alt="Adobe Photoshop logo">
-                        <img src="images/ae.svg" alt="Adobe Aftereffects logo">
+                        <div class="skill">
+                            <img src="images/ai.svg" alt="Ai logo">
+                            <div class="bar"><span style="--level: 85%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/figma.svg" alt="Figma logo">
+                            <div class="bar"><span style="--level: 85%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/ps.svg" alt="Adobe Photoshop logo">
+                            <div class="bar"><span style="--level: 65%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/ae.svg" alt="Adobe Aftereffects logo">
+                            <div class="bar"><span style="--level: 40%"></span></div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skills-list">
                     <h3>Codeing skills</h3>
                     <div class="skills-icons">
-                        <img src="images/html.svg" alt="HTML logo">
-                        <img src="images/css.svg" alt="CSS logo">
-                        <img src="images/js.svg" alt="JavaScript logo">
+                        <div class="skill">
+                            <img src="images/html.svg" alt="HTML logo">
+                            <div class="bar"><span style="--level: 85%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/css.svg" alt="CSS logo">
+                            <div class="bar"><span style="--level: 75%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/js.svg" alt="JavaScript logo">
+                            <div class="bar"><span style="--level: 45%"></span></div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="skills-list">
-                    <h3>Basic knowledge of:</h3>
+                    <h3>Basic knowledge of</h3>
                     <div class="skills-icons">
-                        <img src="images/wp.svg" alt="Wordpress logo">
-                        <img src="images/office.svg" alt="Microsoft Office logo">
-                        <img src="images/git.svg" alt="Git logo">
+                        <div class="skill">
+                            <img src="images/wp.svg" alt="Wordpress logo">
+                            <div class="bar"><span style="--level: 40%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/office.svg" alt="Microsoft Office logo">
+                            <div class="bar"><span style="--level: 75%"></span></div>
+                        </div>
+                        <div class="skill">
+                            <img src="images/git.svg" alt="Git logo">
+                            <div class="bar"><span style="--level: 75%"></span></div>
+                        </div>
                     </div>
                 </div>
             </div>

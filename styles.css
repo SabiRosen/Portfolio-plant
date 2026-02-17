@@ -64,7 +64,7 @@ body{
 
 /*-----------------------------------------------------*/
 
-main h1{
+h1{
     font-size: clamp(2rem, calc(7vw + 1rem), 5rem);
     font-weight: 500;
     color: #2E2A26;
@@ -86,7 +86,7 @@ h1, h2{
 }
 
 h2{
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
     font-weight: 500;
     color: #2E2A26;
 }
@@ -94,8 +94,10 @@ h2{
 h3, p, a{
     font-family: Arial, Helvetica, sans-serif;
 }
+
 p{
-    font-size: 1.3rem;
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    line-height: 1.6;;
 }
 
 .btn{
@@ -140,7 +142,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem clamp(1rem, 4vw, 2rem);
     flex-direction: row;
     
     background-color: #f3e3ce1b;
@@ -152,7 +154,7 @@ header{
 
 
 header img {
-    height: 4rem;
+    height: clamp(2.6rem, 6vw, 4rem);
     width: auto;
     transition: 0.5s ease-in-out;
 }
@@ -194,11 +196,12 @@ header img:hover{
 
 .mobil-menu{
     position: fixed;
+    z-index: 900;
     top: 0;
     right: 0;
-    width: 70%;
+    width: min(360px, 80vw);
     height: 100vh;
-    background-color: #f3e3ce1b;
+    background-color: #f3e3ce;
     backdrop-filter: blur(5px);
     border-left: 1px solid #ffffffd4;
     box-shadow: -3px 3px 3px #00000012;
@@ -215,7 +218,6 @@ header img:hover{
     flex-direction: column;
     gap: 2em;
     justify-content: space-evenly;
-    align-items: center;
 }
 
 .mobil-menu ul li a{
@@ -226,6 +228,19 @@ header img:hover{
     transition: 0.3s ease-in-out;
     font-family: fraunces, serif;
 }
+
+.mobil-menu.is-open{
+    transform: translateX(0);
+}
+
+.close-menu{
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    background: none;
+    border: none;
+}
+
 
 /*animation for projects sektion*/
 
@@ -303,6 +318,20 @@ header img:hover{
 
 
 @media screen and (max-width: 600px){
+    .indholds-heading, .indholds-slider{
+        width: 90%;
+    }
+    .indholds-slider{
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .indholds-slider img{
+        flex: 0 0 80%;
+        width: 20%;
+        scroll-snap-align: start;
+    }
+
     .header-nav{
         display: none;
     }
@@ -310,3 +339,31 @@ header img:hover{
         display: block;
     }
 }
+
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+
+  *, *::before, *::after{
+    animation: none;
+    transition: none;
+  }
+
+  /* scroll-watcher skal bare være statisk */
+  .scroll-watcher{
+    scale: 1 1;
+  }
+
+  /* typewriter: vis teksten uden cursor */
+  .typewriter{
+    opacity: 1;
+    width: auto;
+    border-right: 0;
+    white-space: normal;
+    overflow: visible;
+  }
+}
+
+@supports not (animation-timeline: scroll()){
+  .scroll-watcher{ display: none; }
+}
+

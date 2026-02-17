@@ -1,22 +1,23 @@
 #kontakt-container{
     background-color: #7A8F6A;
     color: #fff;
-    width: 65%;
+    width: min(900px, 90%);
 
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 2rem auto;
 
     border-radius: 100px;
     overflow: hidden;
 }
 
 #kontakt-oplysninger{
+    flex: 1;
     display: flex;
-    padding: 2rem;
+    padding: 2.5rem;
     flex-direction: column;
-    width: 100%;
-    gap: 3rem;
+    min-width: 0;
+    gap: 2rem;
     justify-content: center;
 }
 
@@ -33,9 +34,52 @@
 }
 
 .kontakt-image{
-    width: 55%;
+    flex: 0 0 45%;
     padding-top: 2rem;
+    display: flex;
+    align-items: flex-end;
 }
 .kontakt-image img{
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 700px){
+  #kontakt-container{
+    flex-direction: column;
+    border-radius: 40px;
+  }
+
+  #kontakt-oplysninger{
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .kontakt-info{
+    align-items: flex-start;
+  }
+
+  .kontakt-info p,
+  .kontakt-info a{
+    font-size: 1.1rem;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .contact-page h1{
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+
+  .kontakt-image{
+    width: 100%;
+    padding: 0;
+    flex: none;
+  }
+
+  .kontakt-image img{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }

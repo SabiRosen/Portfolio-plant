@@ -10,13 +10,14 @@
     <link rel="stylesheet" href="about.css">
 
       <script src="typing.js" defer></script>
+      <script src="about-parallax.js" defer></script>
 </head>
 <body>
     <header>
         <a href="index.html" id="logo"><img src="images/logo.svg" alt="Logo"></a>
         <nav class="header-nav">
             <ul class="nav-links">
-                <li><a href="projects.html">Projekter</a></li>
+                <li><a href="index.html#projects">Projekter</a></li>
                 <li><a href="about.html">Om mig</a></li>
                 <li><a href="contact.html">Kontakt</a></li>
             </ul>
@@ -25,7 +26,7 @@
             <img src="images/burger.svg" alt="menu ikon" id="burger">
             <div class="mobil-menu">
                 <ul>
-                    <li><a href="projects.html">Projekter</a></li>
+                    <li><a href="index.html#projects">Projekter</a></li>
                     <li><a href="about.html">Om mig</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
@@ -40,40 +41,53 @@
             </div>
         </div>
         
-        <section class="about-info">
-            <article class="slide">
-                <div class="slide-tekst">
+            <section class="about-split" id="about-split">
+                <div class="about-steps">
+                    <article class="about-step is-active" data-visual="visual-1">
+                    <h2>Frontend & UI</h2>
                     <p>
-                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design. Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer bliver omsat til levende digitale løsninger gennem kode. 
+                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design.
+                        Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer
+                        bliver omsat til levende digitale løsninger gennem kode.
                         For mig handler godt design ikke kun om, hvordan noget ser ud, men om hvordan det føles at bruge.
                     </p>
-                </div>
+                    </article>
 
-                <img src="images/hello-world.svg" alt="illustration af computer">
-            </article>
-
-            <article class="slide">
-                <div class="slide-tekst">
+                    <article class="about-step" data-visual="visual-2">
+                    <h2>Process & samarbejde</h2>
                     <p>
-                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design. Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer bliver omsat til levende digitale løsninger gennem kode. 
+                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design.
+                        Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer
+                        bliver omsat til levende digitale løsninger gennem kode.
+                        For mig handler godt design ikke kun om, hvordan noget ser ud, men om hvordan det føles at bruge.
+                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design.
+                        Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer
+                        bliver omsat til levende digitale løsninger gennem kode.
                         For mig handler godt design ikke kun om, hvordan noget ser ud, men om hvordan det føles at bruge.
                     </p>
-                </div>
+                    </article>
 
-                <img src="images/reading.svg" alt="illustration af hylde med bøger">
-            </article>
-
-            <article class="slide">
-                <div class=slide-tekst>
+                    <article class="about-step" data-visual="visual-3">
+                    <h2>Hvem jeg er</h2>
                     <p>
-                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design. Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer bliver omsat til levende digitale løsninger gennem kode. 
+                        Jeg studerer multimediedesign med en særlig interesse for frontend-udvikling og UI-design.
+                        Jeg synes, det er spændende at arbejde i krydsfeltet mellem æstetik og funktionalitet, hvor idéer
+                        bliver omsat til levende digitale løsninger gennem kode.
                         For mig handler godt design ikke kun om, hvordan noget ser ud, men om hvordan det føles at bruge.
                     </p>
+                    </article>
                 </div>
 
-                <img src="images/mig-green-2.png" alt="et billede af Sabina">
-            </article>
-        </section>
+                
+                <aside class="about-visual" aria-label="Illustration">
+                    <div class="visual-stack">
+                    <img id="visual-1" class="visual is-active" src="images/hello-world.svg" alt="illustration af computer">
+                    <img id="visual-2" class="visual" src="images/reading.svg" alt="illustration af hylde med bøger">
+                    <img id="visual-3" class="visual" src="images/mig-green-2.png" alt="et billede af Sabina">
+                    </div>
+                </aside>
+            </section>
+
 
         <div class="line"></div>
         <div class="about-lamp-section">
@@ -409,26 +423,15 @@
                 </div>
         </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+        
         <div class="indholds-heading">
             <h2>Her er nogle projekter fra min fritid</h2>
         </div>
         <div class="indholds-slider">
-            <img src="images/kaffekanden-logo.jpg" alt="Kaffekanden logo variationer">
-            <img src="images/kaffekanden-gavekort.jpg" alt="Kaffekanden gavekort">
-            <img src="images/grøn-te.png" alt="grøn te etiket">
-            <img src="images/sort-te.png" alt="sort te etiket">
-            <img src="images/kaffekanden-stempel.jpg" alt="Kaffekanden stempelkort">
-            <img src="images/brun-kaffe.jpg" alt="brun kaffeikande mønster">
+            <img src="images/temperance.jpg" alt="temperance tarot kort">
+            <img src="images/the-lovers.jpg" alt="the lovers tarot kort">
+            <img src="images/cheese.jpg" alt="cheese slut artwork">
+            <img src="images/grounded.jpg" alt="stay grounded artwork">
         </div>
 
     </main>
