@@ -63,7 +63,7 @@
   aspect-ratio: 6/7;
 }
 
-/* Billede 2: øverst, liggende — større og forskudt */
+/* Billede 2: øverst, liggende*/
 .img-2{
   left: 58%;
   top: 0;
@@ -71,10 +71,10 @@
   width: clamp(200px, 22vw, 400px);
   aspect-ratio: 15/10;
 
-  transform: translateX(-10%); /* giver den “forskudt” look */
+  transform: translateX(-10%);
 }
 
-/* Billede 3: nederst, stående — samme størrelse som billede 1 */
+/* Billede 3: nederst, stående */
 .img-3{
   left: 46%;
   top: 280px;
@@ -144,4 +144,164 @@
   .overlay #left-branch{
     animation: none;
   }
+}
+
+
+/*--------------------om mig side---------------------*/
+
+.about-info{
+  display: flex;
+  width: 80%;
+  min-height: 60vh;
+  margin: 2rem auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  gap: 2rem;
+
+  padding-bottom: 1rem;
+}
+
+.slide{
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  scroll-snap-align: start;
+}
+
+.slide .slide-tekst{
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+}
+
+.slide img{
+  flex: 0 0 35%;
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+}
+
+
+.about-lamp-section{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-lamp-section img{
+    width: 15%;
+}
+
+.timeline{
+    position: relative;
+    width: min(1100px, 80%);
+    margin: 2rem auto 4rem;
+}
+
+.timeline-plant{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+}
+.timeline-plant svg{
+  width: clamp(120px, 14vw, 190px);
+  height: auto;
+}
+
+
+.timeline-content{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+
+.timeline-left{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.timeline-right{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 2rem;
+}
+
+
+/* ========== PLANT ANIMATION SETUP ========== */
+
+.timeline-plant svg {
+  overflow: visible;
+}
+
+/* --- Hele planten (uden potten) --- */
+.timeline-plant svg #growth-plant{
+  transform-box: fill-box;
+  transform-origin: 50% 100%; /* roterer fra bunden */
+  animation: plant-sway 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* --- Blade --- */
+.timeline-plant svg g[id^="leaf"]{
+  transform-box: fill-box;
+  transform-origin: left center; /* pivot ved stilken */
+  animation: leaf-sway 3.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Små variationer så det ser naturligt ud */
+.timeline-plant svg #leaf_2 { animation-duration: 4.2s; animation-delay: -1.2s; }
+.timeline-plant svg #leaf_3 { animation-duration: 3.6s; animation-delay: -2s; }
+.timeline-plant svg #leaf_4 { animation-duration: 4.5s; animation-delay: -0.7s; }
+.timeline-plant svg #leaf_5 { animation-duration: 3.9s; animation-delay: -1.6s; }
+.timeline-plant svg #leaf_6 { animation-duration: 4.3s; animation-delay: -2.4s; }
+
+/* --- Keyframes --- */
+
+@keyframes plant-sway{
+  0%, 100% { transform: rotate(-1deg); }
+  50%      { transform: rotate(1.2deg); }
+}
+
+@keyframes leaf-sway{
+  0%, 100% { transform: rotate(-1.2deg); }
+  50%      { transform: rotate(2deg); }
+}
+
+/* --- Respect user motion preference --- */
+@media (prefers-reduced-motion: reduce){
+  .timeline-plant svg #growth-plant,
+  .timeline-plant svg g[id^="leaf"]{
+    animation: none;
+  }
+}
+
+
+/*-------------------lille skærm------------------------------*/
+
+@media screen and (max-width: 800px) {
+    .timeline{
+        width: 90%
+    }
+    .timeline-plant{
+        z-index: 1;
+    }
+
+    .timeline-left, .timeline-right{
+        z-index: 2;
+        margin-bottom: 1.5rem;
+    }
+    .timeline-left h2, .timeline-right h2{
+        font-size: 1.3rem;
+    }
 }

@@ -45,7 +45,10 @@
     width: 80%;
     margin: 2rem auto;
     color: #3F6A45;
-    font-size: 1.3rem;
+}
+.overview p{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .project-video{
@@ -83,18 +86,4 @@
     list-style-position: inside;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
-}
-
-.indholds-slider{
-    display: flex;
-    width: 80%;
-    margin: 2rem auto;
-    overflow-y: hidden;
-    gap: 4rem;
-}
-
-.indholds-slider img{
-    width: 40%;
-    aspect-ratio: 8/9;
-    object-fit: cover;
 }
