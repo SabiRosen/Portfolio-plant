@@ -1,8 +1,10 @@
 .background{
-    background-image: url(images/baggrund.jpg);
-    background-position: center;
-    background-repeat: no-repeat; 
-    background-size: cover;
+    background-image: url(images/background.jpg);
+    background-color: #F3E3CE;
+    background-position: top center;
+    background-repeat: repeat-y; 
+    background-size: 100% auto;
+    min-height: 100vh;
 }
 
 #project-mockups{
@@ -33,18 +35,66 @@
     font-size: 1.5rem;
 }
 
-.mockup-info p{
-    font-size: 1.2rem;
-}
-
 
 /*---------------enkelte sider--------------------------*/
 
+
+.overview{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 2rem auto;
+    color: #3F6A45;
+    font-size: 1.3rem;
+}
+
 .project-video{
     display: flex;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 .project-video video{
+    width: 100%;
+}
+
+.divider{
+    background-color: #7A8F6A;
+    height: 2px;
+    margin-top: 1rem;
+}
+
+.om-projekt{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
     width: 80%;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.om-projekt h2{
+    padding-bottom: 1rem;
+}
+
+.om-projekt ul {
+    padding-left: 0;
+    margin-left: 0;
+    list-style-position: inside;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.indholds-slider{
+    display: flex;
+    width: 80%;
+    margin: 2rem auto;
+    overflow-y: hidden;
+    gap: 4rem;
+}
+
+.indholds-slider img{
+    width: 40%;
+    aspect-ratio: 8/9;
+    object-fit: cover;
 }

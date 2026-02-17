@@ -37,11 +37,6 @@ img, svg {
     width: fit-content;
     max-width: 500px;
 }
-.intro h1{
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: #2E2A26;
-}
 .intro p{
     font-size: 1.5rem;
     font-weight: 400;
