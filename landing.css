@@ -110,7 +110,6 @@ img, svg {
     flex: 0 1 430px;
 }
 
-
 .projects-lamp-section{
     display: flex;
     justify-content: center;
@@ -119,13 +118,11 @@ img, svg {
     z-index: 2;
     top: 0;
     transform: translateY(-130px);
-    margin-bottom: 2rem;
     padding-top: clamp(2rem, 8vw, 12rem);
 }
 .projects-lamp-section img{
     width: 200px;
     height: auto;
-    /* filter: drop-shadow(#eea192 2px 0px 4px) */
 }
 
 .projects-lamp-section h2{
@@ -134,7 +131,6 @@ img, svg {
     margin-top: 10rem;
     max-width: fit-content;
 }
-
 
 #project-container{
     display: flex;
@@ -171,6 +167,10 @@ img, svg {
     max-width: 500px;
     height: auto;
     display: block;
+}
+
+.project-summary h3{
+    font-size: 1.4rem;
 }
 
 /*skills--------------------------------------------------------*/
@@ -439,6 +439,9 @@ img, svg {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+    .project-summary h3{
+    font-size: 1.1rem;
+}
 
     .line2 {
         position: absolute;         

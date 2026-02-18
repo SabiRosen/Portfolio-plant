@@ -19,6 +19,9 @@
 
   /* Borders */
   --color-border: #ffffffd4;
+
+  /*card*/
+  --color-card: #f7eadb;
 }
 
 body.dark{
@@ -33,7 +36,10 @@ body.dark{
     --color-accent: #7a8f6a;
 
     /*border */
-     --color-border: #473c2ed4;
+     --color-border: #6e5f4cd4;
+
+    /*card*/
+    --color-card: #2a2622
 }
 
 *{
@@ -245,6 +251,9 @@ header img {
   transform: rotate(15deg);
 }
 
+#burger, #burger-close{
+    fill: var(--color-text-primary)
+}
 
 /*--------mobile menu toggle-----------*/
 .mobile-nav{
@@ -268,7 +277,7 @@ header img {
 
     background-color: var(--color-bg);
     backdrop-filter: blur(5px);
-    border-left: 1px solid #ffffffd4;
+    border-left: 1px solid var(--color-border);
     box-shadow: -3px 3px 3px #00000012;
     box-sizing: border-box;
 
@@ -304,8 +313,8 @@ header img {
 
 .close-menu{
     position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
+    top: 0;
+    right: 0;
     background: none;
     border: none;
     z-index: 1001;
@@ -384,34 +393,83 @@ header img {
     margin: auto;
 }
 
-.indholds-slider{
-    display: flex;
-    width: 80%;
-    margin: 2rem auto;
-    overflow-y: hidden;
-    gap: 4rem;
+.indholds-slider-wrap{
+  position: relative;
+  width: 80%;
+  margin: 2rem auto;
 }
 
+/* din slider */
+.indholds-slider{
+  display: flex;
+  gap: 4rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth; /* lækker desktop scroll på klik */
+  padding: 0 3rem;         /* plads til pile */
+}
+
+/* skjul scrollbar (Chrome/Safari/Edge) */
+.indholds-slider::-webkit-scrollbar{
+  display: none;
+}
+
+/* skjul scrollbar (Firefox) */
+.indholds-slider{
+  scrollbar-width: none;
+}
+
+/* billeder */
 .indholds-slider img{
-    width: 40%;
-    aspect-ratio: 8/9;
-    object-fit: cover;
+  width: 40%;
+  aspect-ratio: 8/9;
+  object-fit: cover;
+}
+
+/* Pile */
+.slider-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  line-height: 1;
+  background: none;
+  color: var(--color-text-primary);
+  z-index: 2;
+}
+
+.slider-btn.prev{ left: 8px; }
+.slider-btn.next{ right: 8px; }
+
+.slider-btn:hover{
+  color: var(--color-text-secondary);
 }
 
 
 @media screen and (max-width: 600px){
-    .indholds-heading, .indholds-slider{
+    .indholds-slider-wrap{
         width: 90%;
     }
+
     .indholds-slider{
         gap: 1rem;
-        overflow-x: auto;
+        padding: 0;
         scroll-snap-type: x mandatory;
     }
+
     .indholds-slider img{
         flex: 0 0 80%;
         width: 20%;
         scroll-snap-align: start;
+    }
+    .slider-btn{
+        display: none;
     }
 
     #logo img:hover{
