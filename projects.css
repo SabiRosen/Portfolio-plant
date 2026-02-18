@@ -61,6 +61,21 @@
     width: 100%;
 }
 
+.project-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.project-link a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color:#3F6A45;
+}
+.project-link a:hover{
+    text-decoration: underline;
+}
+
 .divider{
     background-color: #7A8F6A;
     height: 2px;
@@ -86,4 +101,20 @@
     list-style-position: inside;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .heading h1{
+        font-size: 2rem;
+        width: 100%;
+    }
+    .overview p{
+        font-size: 1rem;
+    }
+    .project-link a{
+        font-size: 1rem;
+    }
+    .om-projekt ul{
+        font-size: 1rem;
+    }
 }

@@ -262,7 +262,7 @@ header img:hover{
 }
 #right-branch{
     animation: sway 5s ease-in-out infinite;
-    transform-origin: 90% 50%;
+    transform-origin: 80% 50%;
 }
 #left-branch{
     animation: sway2 5s ease-in-out infinite;
@@ -270,7 +270,7 @@ header img:hover{
 }
 #top-branch{
     animation: sway3 5s ease-in-out infinite;
-    transform-origin: 50% 80%;
+    transform-origin: 70% 20%;
 }
 
 @keyframes sway {
@@ -285,7 +285,7 @@ header img:hover{
 }
 @keyframes sway3 {
   0%   { transform: rotate(0deg); }
-  50%  { transform: rotate(3deg); }
+  50%  { transform: rotate(1.5deg); }
   100% { transform: rotate(0deg); }
 }
 @keyframes sway4 {
@@ -337,6 +337,12 @@ header img:hover{
     }
     .mobile-nav{
         display: block;
+    }
+    .btn{
+        margin: 1rem auto 0;
+    }
+    .btn:hover{
+        transform: none;
     }
 }
 
