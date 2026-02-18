@@ -1,5 +1,5 @@
 #kontakt-container{
-    background-color: #7A8F6A;
+    background-color: var(--color-surface);
     color: #fff;
     width: min(900px, 90%);
 

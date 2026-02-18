@@ -149,7 +149,7 @@
 
 /* front */
 .img-card .flip-card-front{
-  background: #f3e3ce1b;
+  background: var(--color-surface);
 }
 
 
@@ -164,7 +164,7 @@
 /* back */
 .img-card .flip-card-back{
   transform: rotateY(180deg);
-  background: #7A8F6A;
+  background: var(--color-surface);
   padding: 1rem;
   text-align: center;
 }
@@ -195,7 +195,7 @@
     margin-top: 1rem;
     font-size: 1.3rem;
     font-weight: 400;
-    color: #2E2A26;
+    color: var(--color-text-primary);
     line-height: 1.6;
 }
 
@@ -203,8 +203,28 @@
     display: flex;
     gap: 2rem;
     padding-top: 4rem;
-    justify-content: center;
+    justify-content: space-between;
 }
+
+.about-values p{
+    color: var(--color-surface);
+}
+
+.value{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+}
+
+.value img{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
 
 
 @media (max-width: 900px){
