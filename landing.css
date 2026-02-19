@@ -55,7 +55,9 @@ img, svg {
     font-family: "fraunces, serif";
     font-weight: 600;
     color: var(--color-text-secondary);
-    text-shadow: rgb(0, 0, 0, 0.2) 4px 4px 4px;
+}
+.explore svg{
+    stroke: var(--color-text-secondary);
 }
 
 .hero-right{
@@ -299,16 +301,20 @@ img, svg {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: #ffffff;
+    color: var(--color-text-on-green);
 }
 
 .contact-content h2{
-    color: #ffffff;
+    color: var(--color-text-on-green);
 }
 .contact-content p{
     padding-top: 2rem;
     font-size: 1.4rem;
     line-height: 1.6;
+}
+
+.contact-content .typewriter{
+    border-right: 2px solid var(--color-text-on-green);
 }
 
 @media (max-width: 900px){

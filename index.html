@@ -82,7 +82,11 @@
 
                     <div class="explore">
                         <h3>Udforsk haven</h3>
-                        <img src="images/arrow-down.svg" alt="Arrow down">
+                        <svg width="24" height="30" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1.5V27.75" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22.5 18L12 28.5L1.5 18" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+
                     </div>
                 </div>
             </div>
@@ -202,7 +206,7 @@
                                 <img class="photo" src="images/mig-morgan.png" alt="billede af Sabina til koncert">
                             </div>
                             <div class="flip-card-back">
-                                <p>Jeg er glad for musik i rigtig mange genre, og nyder at komme ud og opleve mine favoritter ind i mellem. Her er jeg til Morgan Wallen koncert med min bror og hans kæreste.
+                                <p>Jeg er glad for musik i mange genre, og nyder at komme ud og opleve mine favoritter. Her er jeg til Morgan Wallen koncert med min bror og hans kæreste.
                                 </p>
                             </div>
                         </div>
@@ -1121,5 +1125,13 @@
             </div>
         </section>
     </main>
+
+    <script>
+        document.querySelectorAll('.img-card').forEach(card => {
+        card.addEventListener('click', () => {
+            card.classList.toggle('is-flipped');
+        });
+        });
+    </script>
 </body>
 </html>
