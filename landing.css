@@ -111,24 +111,23 @@ img, svg {
 }
 
 .projects-lamp-section{
+    width: 80%;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    position: relative;
-    z-index: 2;
-    top: 0;
-    transform: translateY(-130px);
-    padding-top: clamp(2rem, 8vw, 12rem);
+    justify-content: space-between;
+    margin: 1rem auto 2rem auto;
+    align-items: center;
 }
 .projects-lamp-section img{
-    width: 200px;
+    max-width: 200px;
     height: auto;
+    top: 0;
+    transform: translateY(-60px);
 }
 
 .projects-lamp-section h2{
     color: var(--color-text-primary);
     z-index: 2;
-    margin-top: 10rem;
     max-width: fit-content;
 }
 
@@ -316,13 +315,15 @@ img, svg {
   .logo-svg{ width: clamp(320px, 75vw, 650px); }
   .hero-right{ right: clamp(1rem, 5vw, 80px); }
 
-    .projects-lamp-section{
-    
-        transform: translateY(-70px);
+    .projects-lamp-section img{
+        width: 150px;
     }
 
     .projects{
         width: 90%;
+    }
+    .project p{
+        font-size: 1.3rem;
     }
     .skills-wrapper{
         width: 100%;
@@ -423,7 +424,6 @@ img, svg {
         margin: auto;
     }
     .projects-lamp-section{
-        margin-top: 2rem;
         width: 100%;
     }
     .projects-lamp-section h2{

@@ -1,3 +1,58 @@
+.kontakt-page{
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ligger som et lag ovenpå siden */
+.kontakt-deco{
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Selve grene */
+.gren{
+    position: absolute;
+    top: -40px;
+    height: auto;
+    transform-origin: 50% 0%;
+    animation: sway 6s ease-in-out infinite;
+    filter: drop-shadow(0 6px 10px rgba(0,0,0,0.10));
+    z-index: 1;
+}
+
+
+.gren--left{
+    left: -20px;
+    animation-delay: -1s;
+    width: clamp(120px, 16vw, 220px);
+}
+
+.gren--mid{
+    left: 50%;
+    transform: translateX(-50%);
+    animation-duration: 7.5s;
+    width: clamp(100px, 12vw, 170px);
+
+}
+
+.gren--right{
+    right: -30px;
+    animation-delay: -2s;
+    width: clamp(180px, 22vw, 300px);
+}
+
+@keyframes sway{
+  0%, 100% { transform: rotate(-1.5deg); }
+  50%      { transform: rotate(1.5deg); }
+}
+
+.heading, #kontakt-container{
+    position: relative;
+    z-index: 10;
+}
+
 #kontakt-container{
     background-color: var(--color-surface);
     color: #fff;
@@ -45,41 +100,50 @@
     display: block;
 }
 
-@media (max-width: 700px){
-  #kontakt-container{
-    flex-direction: column;
-    border-radius: 40px;
-  }
+@media (max-width: 600px){
+    .gren{
+        width: 150px;
+        top: -30px;
+        animation-duration: 8s;
+    }
+  .gren--mid{
+        display: none; /* ofte nicest at droppe midter på mobil */
+    }
+
+    #kontakt-container{
+        flex-direction: column;
+        border-radius: 40px;
+    }
 
   #kontakt-oplysninger{
-    padding: 2rem 1.5rem;
-    gap: 1.5rem;
-  }
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
 
   .kontakt-info{
-    align-items: flex-start;
-  }
+        align-items: flex-start;
+    }
 
   .kontakt-info p,
   .kontakt-info a{
-    font-size: 1.1rem;
-    line-height: 1.4;
-    word-break: break-word;
-  }
+        font-size: 1.1rem;
+        line-height: 1.4;
+        word-break: break-word;
+    }
 
   .contact-page h1{
-    font-size: clamp(1.8rem, 6vw, 2.4rem);
-  }
+        font-size: clamp(1.8rem, 6vw, 2.4rem);
+    }
 
   .kontakt-image{
-    width: 100%;
-    padding: 0;
-    flex: none;
-  }
+        width: 100%;
+        padding: 0;
+        flex: none;
+    }
 
   .kontakt-image img{
-    width: 100%;
-    max-width: 420px;
-    margin: 0 auto;
-  }
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+    }
 }
