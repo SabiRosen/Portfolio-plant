@@ -1,6 +1,10 @@
 @font-face {
-    font-family: fraunces;
+    font-family: "fraunces, serif";
     src: url(fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
+}
+@font-face {
+    font-family: "inter, san-serif";
+    src: url(fonts/Inter-VariableFont_opsz\,wght.ttf) format("truetype");
 }
 
 :root{
@@ -127,7 +131,7 @@ h1{
 }
 
 h1, h2{
-    font-family: fraunces, serif;
+    font-family: "fraunces, serif";
     width: 100%;
 }
 
@@ -138,7 +142,7 @@ h2{
 }
 
 h3, p, a{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "inter, san-serif";
 }
 
 p{
@@ -228,7 +232,7 @@ header img {
     font-weight: 500;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
-    font-family: fraunces, serif;
+    font-family: "fraunces, serif";
 }
 
 .theme-toggle{
@@ -304,7 +308,7 @@ header img {
     font-weight: 500;
     font-size: 1.5rem;
     transition: 0.3s ease-in-out;
-    font-family: fraunces, serif;
+    font-family: "fraunces, serif";
 }
 
 .mobil-menu.is-open{
@@ -534,7 +538,7 @@ header img {
   }
 }
 
-@supports not (animation-time: scroll()){
+@supports not (animation-timeline: scroll()){
   .scroll-watcher{ display: none; }
 }
 

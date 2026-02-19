@@ -52,7 +52,7 @@ img, svg {
 }
 .explore h3{
     font-size: 1.5rem;
-    font-family: fraunces, serif;
+    font-family: "fraunces, serif";
     font-weight: 600;
     color: var(--color-text-secondary);
     text-shadow: rgb(0, 0, 0, 0.2) 4px 4px 4px;
@@ -208,7 +208,7 @@ img, svg {
 .skills-list h3{
     font-size: 1.5rem;
     color: var(--color-text-primary);
-    font-family: fraunces, serif;
+    font-family: "fraunces, serif";
 }
 
 .skills-icons{
@@ -393,7 +393,10 @@ img, svg {
     }
 
     .explore{
-        margin-top: 2rem;
+        margin-top: 1.8rem;
+    }
+    .explore h3{
+        font-size: 1.2rem;
     }
 
     .plant-illustration {
