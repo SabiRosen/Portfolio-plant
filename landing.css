@@ -58,6 +58,8 @@ img, svg {
 }
 .explore svg{
     stroke: var(--color-text-secondary);
+    width: 1.5rem;
+    height: auto;
 }
 
 .hero-right{
@@ -403,6 +405,10 @@ img, svg {
     }
     .explore h3{
         font-size: 1.2rem;
+    }
+    #hero .explore svg {
+        width: 1.5rem;
+        height: auto;
     }
 
     .plant-illustration {

@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // theme toggle
-const toggleButtons = document.querySelectorAll(".theme-toggle");
+const toggleButtons = document.querySelectorAll(".theme-toggle"); //henter alle knapper
 
 const moonSVG = `
 <svg width="24" height="24" viewBox="0 0 24 24">
